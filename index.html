@@ -68,13 +68,14 @@
         function gurul(domObj) {
             ++total;
             if (total == 6) {
-                domObj.disabled = true
+                //domObj.disabled = true
                 
                 dice.forEach((nr) => {
                     const item = `<i class="fa-solid fa-dice-${nr} fa-10x"></i>`
                 document.getElementById('dices').innerHTML += item
             })
             document.getElementById('newGame').classList.toggle('hide')
+            document.getElementById('gurul').classList.toggle('hide')
                 return
             }
             const ranNr = Math.floor(Math.random() * 6) + 1
@@ -95,8 +96,9 @@
             document.querySelector('p').innerHTML = '';
             document.getElementById('dices').innerHTML = '';
             document.getElementById('dice').innerHTML = '';
-            document.getElementById('gurul').disabled = false;
+            //document.getElementById('gurul').disabled = false;
             document.getElementById('newGame').classList.toggle('hide')
+            document.getElementById('gurul').classList.toggle('hide')
 
         }
     </script>
